@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#top">Portfolio</a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top" class="container">
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2 class="kicker">ABOUT</h2>
+      <div class="card">
+        <h1 class="hero">Hi, I’m <span data-edit="name">Your Name</span>.</h1>
+        <p class="lede" data-edit="about">
+          Data Analyst with 5+ years of experience in extracting insights from structured and
+          unstructured data using SQL, Python and R, with a focus on automation and BI.
+          I craft dashboards (Power BI, Tableau), build ETL pipelines (Informatica, Talend, NiFi),
+          and deliver scalable analytics on Snowflake/Redshift/BigQuery. Comfortable across
+          Hadoop/Spark, APIs, and CI/CD to get reliable insights into production.
+        </p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h2 class="kicker">EXPERIENCE</h2>
+      <h3 class="section-title">Professional Experience</h3>
+
+      <article class="card job">
+        <div class="job-header">
+          <h4 class="role">Senior Data Analyst — <span class="company">W. R. Berkley Corporation</span></h4>
+          <div class="meta">Jan 2025 – Present • Greenwich, CT</div>
+        </div>
+        <ul class="bullets">
+          <li>Designed relational data models and SQL pipelines; built scalable ETL with Informatica and Apache NiFi.</li>
+          <li>Implemented big-data frameworks with Spark/Hadoop for credit risk and segmentation; centralized warehousing on Snowflake and Redshift.</li>
+          <li>Built real-time streaming with Kafka/Kinesis; orchestrated workflows with Airflow; delivered KPI dashboards in Power BI.</li>
+        </ul>
+      </article>
+
+      <!-- Duplicate this block for more roles -->
+      <article class="card job">
+        <div class="job-header">
+          <h4 class="role">Data Analyst — <span class="company">Company Name</span></h4>
+          <div class="meta">2019 – 2024 • Location</div>
+        </div>
+        <ul class="bullets">
+          <li>Bullet point one describing your impact.</li>
+          <li>Bullet point two with measurable outcomes.</li>
+          <li>Bullet point three highlighting tools and tech.</li>
+        </ul>
+      </article>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2 class="kicker">PROJECTS</h2>
+      <div class="grid">
+        <a class="card project" href="#" target="_blank" rel="noopener">
+          <h4>Customer Churn Prediction</h4>
+          <p>End-to-end notebook and report. Feature engineering, XGBoost, and SHAP insights.</p>
+        </a>
+        <a class="card project" href="#" target="_blank" rel="noopener">
+          <h4>Sales Dashboard (Power BI)</h4>
+          <p>Interactive KPI view with drilldowns, DAX measures, and row-level security.</p>
+        </a>
+        <a class="card project" href="#" target="_blank" rel="noopener">
+          <h4>Data Pipeline on Snowflake</h4>
+          <p>Ingestion → staging → marts; automated with dbt and GitHub Actions.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2 class="kicker">CONTACT</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a> · LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a> · GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener">@yourusername</a></p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> <span data-edit="name">Your Name</span></p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
