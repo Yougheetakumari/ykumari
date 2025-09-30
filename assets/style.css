@@ -1,52 +1,71 @@
-/* --- NAV + GLASS --- */
+/* --- BASELINE (old dark theme) --- */
+:root {
+  --bg:#0b1220;
+  --panel:#121a27;
+  --text:#1a1a1a;  /* switched to dark text on light bg */
+  --muted:#666;
+  --border:#ddd;
+  --radius:14px;
+}
+body {
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  background:#fff;
+  color:#1a1a1a;
+  line-height:1.6;
+}
+.section{margin-top:48px}
+.card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:24px 28px;
+  box-shadow:0 6px 14px rgba(0,0,0,.08);
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:16px;
+}
+.project{text-decoration:none;color:#1a1a1a}
+.project h4{margin:0 0 6px 0}
+
+/* --- NAV + HERO (new design) --- */
 .glass{background:rgba(255,255,255,.2)}
-.site-header{position:sticky;top:0;backdrop-filter:blur(10px) saturate(140%);border-bottom:1px solid rgba(255,255,255,.08)}
+.site-header{position:sticky;top:0;backdrop-filter:blur(10px) saturate(140%);border-bottom:1px solid rgba(0,0,0,.08)}
 .nav{display:flex;justify-content:space-between;align-items:center;max-width:1150px;margin:0 auto;padding:16px 24px}
-.brand{font-weight:700;color:var(--text);text-decoration:none}
+.brand{font-weight:700;text-decoration:none;color:#111}
 .links{display:flex;gap:18px;align-items:center}
-.links a{color:var(--text);opacity:.85;text-decoration:none}
+.links a{text-decoration:none;color:#333;opacity:.85}
 .links a:hover{opacity:1}
 .btn{display:inline-block;padding:10px 16px;border-radius:12px;border:1px solid var(--border);text-decoration:none}
-.btn.ghost{background:transparent}
 .btn.primary{background:#6e6bff;border-color:#6e6bff;color:white}
 
-/* --- HERO --- */
+/* HERO section */
 .hero-wrap{
-  /* soft gradient background */
-  background:
-    radial-gradient(1200px 600px at 20% 20%, rgba(255,255,255,.12), transparent 60%),
-    radial-gradient(1200px 600px at 80% 40%, rgba(149,117,255,.25), transparent 60%),
-    linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0));
-  padding: 32px 0 40px;
+  background:linear-gradient(135deg,#f9f6ff,#fff);
+  padding:60px 0;
 }
 .hero{
-  max-width:1150px;margin:0 auto;padding:24px;display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center
+  max-width:1150px;margin:0 auto;padding:24px;display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;
 }
-.eyebrow{color:#a78bfa;font-weight:700;letter-spacing:.12em;margin:0 0 8px}
-.display{font-size:3.4rem;line-height:1.1;margin:0 0 8px}
-.accent{color:#7c4dff}
-.sublead{font-size:1.15rem;opacity:.95;max-width:52ch}
-
-.cta-row{display:flex;gap:12px;margin:18px 0 8px}
+.display{font-size:3rem;line-height:1.1;margin:0 0 12px}
+.accent{color:#7c4dff;font-weight:700}
+.sublead{font-size:1.1rem;opacity:.9;max-width:52ch}
+.cta-row{display:flex;gap:12px;margin:20px 0}
 .metrics{display:flex;gap:28px;margin-top:22px;flex-wrap:wrap}
 .kpi .num{font-size:1.6rem;font-weight:800}
-.kpi .lbl{opacity:.8}
+.kpi .lbl{opacity:.7}
 
 .hero-right{position:relative;display:flex;justify-content:center}
-.photo-ring{width:360px;height:360px;border-radius:50%;padding:8px;background:conic-gradient(from 0deg, #7c4dff, #6ea8fe, #7c4dff)}
-.photo-ring img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;border:6px solid var(--bg)}
-
-.tagcard{
-  position:absolute;right:-6px;bottom:16px;background:var(--panel);border:1px solid var(--border);
-  border-radius:18px;padding:14px 16px;min-width:160px;box-shadow:0 10px 24px rgba(0,0,0,.25);text-align:center
-}
+.photo-ring{width:320px;height:320px;border-radius:50%;padding:8px;background:conic-gradient(from 0deg,#7c4dff,#6ea8fe,#7c4dff)}
+.photo-ring img{width:100%;height:100%;object-fit:cover;border-radius:50%;border:6px solid #fff}
+.tagcard{position:absolute;right:-6px;bottom:16px;background:#fff;border:1px solid var(--border);border-radius:18px;padding:12px 14px;min-width:150px;box-shadow:0 10px 24px rgba(0,0,0,.15);text-align:center}
 .tag-title{font-weight:800;color:#7c4dff;margin-bottom:2px}
-.tag-sub{opacity:.95}
-.tag-meta{opacity:.75;font-size:.9rem;margin-top:2px}
+.tag-sub{font-size:.95rem}
+.tag-meta{font-size:.85rem;opacity:.7}
 
-/* Responsive */
 @media (max-width:960px){
-  .hero{grid-template-columns:1fr;gap:20px}
-  .photo-ring{width:260px;height:260px}
-  .display{font-size:2.6rem}
+  .hero{grid-template-columns:1fr;gap:20px;text-align:center}
+  .photo-ring{width:220px;height:220px;margin:0 auto}
 }
