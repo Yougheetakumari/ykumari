@@ -1,62 +1,25 @@
-/* Section headings */
-.center-title{ text-align:center; font-size:2rem; margin:0 0 6px }
-.center-sub{ text-align:center; opacity:.8; max-width:70ch; margin:0 auto 24px }
-.projects-wrap{ padding-top:28px }
-
-/* Project cards */
-.cards-2col{ display:grid; grid-template-columns:repeat(2,minmax(260px,1fr)); gap:18px; max-width:1100px; margin:0 auto }
-.p-card{ background:#fff; border:1px solid #e9e9ee; border-radius:14px; padding:16px 18px; box-shadow:0 6px 18px rgba(0,0,0,.06) }
-.p-card-top{ display:flex; justify-content:space-between; align-items:center; margin-bottom:4px }
-.pill{ font-size:.78rem; padding:6px 10px; border-radius:999px; background:#f2efff; color:#6f42ff; display:inline-block }
-.pill.icon{ background:#f3ecff }
-.p-title{ margin:8px 0 6px; font-size:1.05rem }
-.p-text{ margin:0 0 10px; opacity:.9 }
-.p-tags{ display:flex; gap:6px; flex-wrap:wrap; margin:0 0 10px }
-.p-tags span{ font-size:.75rem; padding:4px 8px; border-radius:999px; background:#f7f7fa; border:1px solid #ececf2 }
-.p-meta{ font-size:.85rem; opacity:.8; border-top:1px solid #eee; padding-top:8px }
-
-.center-actions{ text-align:center; margin-top:16px }
-
-/* Skills */
-.skills-wrap{ max-width:1100px; margin:0 auto }
-.skill-group{ margin:18px 0 }
-.skill-group h3{ margin:10px 0 }
-.skill-grid{ display:grid; grid-template-columns:repeat(3,minmax(220px,1fr)); gap:14px }
-.s-card{ background:#fff; border:1px solid #e9e9ee; border-radius:12px; padding:14px 16px }
-.s-head{ font-weight:700; margin-bottom:6px }
-.bar{ height:8px; background:#f0f2f7; border-radius:999px; overflow:hidden }
-.bar span{ display:block; height:100%; background:#6e6bff }
-.s-note{ font-size:.85rem; opacity:.75; margin-top:6px }
-
-/* About */
-.about-metrics{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; max-width:1100px; margin:0 auto 18px }
-.about-metrics .big{ font-size:1.6rem; font-weight:800 }
-.about-grid{ display:grid; grid-template-columns:1.1fr .9fr; gap:18px; max-width:1100px; margin:0 auto }
-.about-cards{ display:grid; grid-template-columns:1fr; gap:10px }
-.a-card{ background:#fff; border:1px solid #e9e9ee; border-radius:12px; padding:12px 14px; box-shadow:0 6px 18px rgba(0,0,0,.06) }
-.a-head{ font-weight:700 }
-.a-sub{ opacity:.95 }
-.a-meta{ font-size:.9rem; opacity:.7 }
-
-/* Contact */
-.contact-grid{ display:grid; grid-template-columns:1.2fr .8fr; gap:18px; max-width:1100px; margin:0 auto }
-.c-card{ background:#fff; border:1px solid #e9e9ee; border-radius:14px; padding:16px 18px; box-shadow:0 6px 18px rgba(0,0,0,.06) }
-.c-card h3{ margin-top:0 }
-.c-card label{ display:block; font-size:.9rem; margin:10px 0 }
-.c-card input, .c-card select, .c-card textarea{ width:100%; padding:10px 12px; border:1px solid #ddd; border-radius:10px; font:inherit }
-.q-link{ display:block; padding:10px 12px; border:1px solid #ececf2; border-radius:10px; margin-bottom:8px; text-decoration:none; color:inherit }
-
-/* Footer */
-.footer{ margin-top:28px; padding:22px 0; border-top:1px solid #eee; background:#fff }
-.footer-grid{ display:grid; grid-template-columns:1.2fr .6fr .6fr; gap:18px; max-width:1100px; margin:0 auto 12px }
-.f-brand{ font-weight:800 }
-.f-head{ font-weight:700; margin-bottom:6px }
-.f-bottom{ text-align:center; font-size:.9rem; opacity:.7 }
-
-/* Responsiveness */
-@media (max-width:980px){
-  .cards-2col{ grid-template-columns:1fr }
-  .skill-grid{ grid-template-columns:1fr }
-  .about-metrics{ grid-template-columns:repeat(2,1fr) }
-  .about-grid, .contact-grid{ grid-template-columns:1fr }
+/* ---- GLOBAL LAYOUT FIX ---- */
+/* Center every major section and give it side padding */
+.container,
+.section,
+.projects-wrap,
+.skills-wrap,
+.about-wrap,
+.contact-wrap,
+.footer .footer-grid {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
+
+/* Clean, consistent vertical rhythm */
+.section { padding-top: 28px; padding-bottom: 28px; }
+h1, h2, h3 { margin: 0 0 12px; line-height: 1.2; }
+p { margin: 0 0 12px; }
+
+/* Prevent tiny text or zoom oddities from collapsing layout */
+html { font-size: 16px; }
+* { box-sizing: border-box; }
+
